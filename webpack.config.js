@@ -4,6 +4,8 @@ var webpackMerge = require('webpack-merge');
 
 // Webpack Config
 var webpackConfig = {
+  devtool: 'source-map',
+
   entry: {
     'main': './src/main.browser.ts',
   },

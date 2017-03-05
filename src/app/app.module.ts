@@ -1,3 +1,4 @@
+import { AlertModule } from 'ng2-bootstrap';
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './app.routes';
@@ -7,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
+import { GameDataComponent } from './game-data/game-data.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RepoBrowserComponent } from './github/repo-browser/repo-browser.component';
@@ -14,6 +16,8 @@ import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
+//import {CoolLocalStorage} from "angular2-cool-storage";
+//import {LocalStorage} from "angular2-local-storage";
 
 @NgModule({
   declarations: [
@@ -23,14 +27,16 @@ import { ContactComponent } from './contact/contact.component';
     RepoListComponent,
     RepoDetailComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    GameDataComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: true })
+    RouterModule.forRoot(rootRouterConfig, { useHash: true }),
+    AlertModule.forRoot()
   ],
   providers: [
     GithubService
