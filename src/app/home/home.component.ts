@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import { GameDataComponent} from '../game-data/game-data.component'
 
 @Component({
   selector: 'home',
@@ -7,5 +6,4 @@ import { GameDataComponent} from '../game-data/game-data.component'
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
-
 }

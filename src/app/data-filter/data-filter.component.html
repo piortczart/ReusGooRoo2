@@ -1,0 +1,11 @@
+<div>
+  <label>Select some:</label>
+  <div *ngFor="let data_item of dataMap">
+    <label class="checkbox-inline" >
+      <input type="checkbox" [(ngModel)]="data_item.checked" />
+      {{data_item.name_value}}
+    </label>
+  </div>
+</div>
+
+<button (click)="clicked()"></button>

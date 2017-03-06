@@ -9,6 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { GameDataComponent } from './game-data/game-data.component';
+import { DataFilterComponent } from './data-filter/data-filter.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RepoBrowserComponent } from './github/repo-browser/repo-browser.component';
@@ -28,7 +29,8 @@ import { ContactComponent } from './contact/contact.component';
     RepoDetailComponent,
     HomeComponent,
     ContactComponent,
-    GameDataComponent
+    GameDataComponent,
+    DataFilterComponent
   ],
   imports: [
     BrowserModule,

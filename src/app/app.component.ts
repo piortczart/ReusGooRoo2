@@ -7,11 +7,17 @@ import {Http} from '@angular/http';
 })
 export class AppComponent {
   data: Object;
+
   constructor(private http: Http) {
-    http.get('app/game-data/ambassadors.json')
+    http.get('app/game-data/biomes.json')
       .map(res => res.json())
-      .subscribe(data => this.data = data,
+      .subscribe(data => {
+          this.data = data;
+          this.biomes = data.map(d => d.name)
+        },
         err => console.log(err),
         () => console.log(this.data));
   }
+
+  biomes: Array<string> = [];
 }
