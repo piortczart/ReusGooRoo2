@@ -9,7 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { GameDataComponent } from './game-data/game-data.component';
-import { DataFilterComponent } from './data-filter/data-filter.component';
+import { BiomesFilterComponent } from './data-filter/biomes-filter.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RepoBrowserComponent } from './github/repo-browser/repo-browser.component';
@@ -17,8 +17,7 @@ import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
-//import {CoolLocalStorage} from "angular2-cool-storage";
-//import {LocalStorage} from "angular2-local-storage";
+import  { SourceFamiliesFilterComponent } from './data-filter/source-families-filter.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +29,8 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     ContactComponent,
     GameDataComponent,
-    DataFilterComponent
+    BiomesFilterComponent,
+    SourceFamiliesFilterComponent
   ],
   imports: [
     BrowserModule,
